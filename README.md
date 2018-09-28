@@ -1,4 +1,4 @@
-# CaesarCipher Web Application
+# CaesarCipher Java Application
 GitWebSearch, 23/9/2018
 #### By **Arnold Henry**
 ## Description
