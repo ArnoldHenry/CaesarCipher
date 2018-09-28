@@ -1,11 +1,9 @@
 import java.io.Console;
-import java.util.Scanner;
 
 public class App {
     public static void main(String[] args)
     {
         Console console = System.console();
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Choose an option");
         System.out.println("1. Encrypt and Decrypt");
         System.out.println("2. Decryption\n");
@@ -14,8 +12,11 @@ public class App {
         if ("1".equals(MyOption)){
             System.out.println("Enter word or letter to Encrypt and Decrypt\"\n");
             String Optionone = console.readLine();
-            String enc = Encode.encrypt(Optionone, 3);
-            String dec = Decode.decrypt(Encode.encrypt(Optionone, 3), 3);
+            System.out.println("Enter key number between (1-26) to encrypt");
+            String chosenNumber = console.readLine();
+            Integer chosenInt = Integer.parseInt(chosenNumber);
+            String enc = Encode.encrypt(Optionone, chosenInt);
+            String dec = Decode.decrypt(Encode.encrypt(Optionone,chosenInt ), chosenInt);
             System.out.println("Encrypted: "+enc);
             System.out.println("Decrypted: "+dec);
 
@@ -26,7 +27,6 @@ public class App {
 
         }else{
             System.out.println("Only words or letters allowed. Wrong Choice");
-
         }
 
 
