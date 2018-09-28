@@ -14,7 +14,7 @@ public class App {
             String Optionone = console.readLine();
             System.out.println("Enter key number between (1-26) to encrypt");
             String chosenNumber = console.readLine();
-            Integer chosenInt = Integer.parseInt(chosenNumber);
+            int chosenInt = Integer.parseInt(chosenNumber);
             String enc = Encode.encrypt(Optionone, chosenInt);
             String dec = Decode.decrypt(Encode.encrypt(Optionone,chosenInt ), chosenInt);
             System.out.println("Encrypted: "+enc);
@@ -23,12 +23,14 @@ public class App {
         }else if("2".equals(MyOption)){
             System.out.println("Enter word or letter to Decrypt");
             String Optiontwo = console.readLine();
-            System.out.println(Decode.decrypt(Encode.encrypt(Optiontwo, 3), 3));
+            System.out.println("Enter key number between (1-26) to encrypt");
+            String chosenNumber = console.readLine();
+            int chosenInt = Integer.parseInt(chosenNumber);
+            String Dec = Decode.decrypt(Optiontwo,chosenInt);
+            System.out.println("Decrypted: "+Dec);
 
         }else{
             System.out.println("Only words or letters allowed. Wrong Choice");
         }
-
-
     }
 }
