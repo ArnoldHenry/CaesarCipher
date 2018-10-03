@@ -25,7 +25,7 @@ public class App {
                 System.out.println("Encrypted: " + enc);
                 System.out.println("Decrypted: " + dec);
 
-            } else if ("2".equals("")) {
+            } else if ("2".equals(option)) {
                 System.out.println("Enter word or letter to Decrypt");
                 String Optiontwo = System.console().readLine();
                 System.out.println("Enter key number between (1-26) to encrypt");
