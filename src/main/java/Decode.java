@@ -1,6 +1,6 @@
- class Decode {
+class Decode {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-     static String decrypt(String cipherText, int chosenInt)
+    static String decrypt(String cipherText, int chosenInt)
     {
         cipherText = cipherText.toLowerCase();
         String plainText = "";
